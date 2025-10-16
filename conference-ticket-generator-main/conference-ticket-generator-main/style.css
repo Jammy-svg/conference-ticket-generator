@@ -1,0 +1,193 @@
+/* ==== RESET ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==== BODY ==== */
+body {
+  font-family: "Inconsolata", monospace;
+  background: radial-gradient(ellipse at top left, #1e0044, #000);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.main {
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ==== BACKGROUND DECOR ==== */
+.bg-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+}
+.bg-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 250px;
+}
+
+/* ==== FORM SECTION ==== */
+.form-container {
+  max-width: 420px;
+  background: rgba(15, 15, 35, 0.8);
+  border: 1px solid #2b2b58;
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #bfbfe5;
+  margin-bottom: 2rem;
+}
+
+/* ==== FORM ==== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.input-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #0e0e2a;
+  border: 1px solid #2b2b58;
+  color: white;
+  border-radius: 8px;
+}
+
+.input-group input:focus {
+  border-color: #7847e0;
+  outline: none;
+}
+
+/* ==== UPLOAD BOX ==== */
+.upload-box {
+  border: 2px dashed #4b4b80;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  background-color: #0e0e2a;
+  cursor: pointer;
+}
+
+.upload-box:hover {
+  border-color: #7847e0;
+}
+
+.upload-icon {
+  width: 24px;
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  background: #7847e0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #5b32c2;
+}
+
+/* ==== TICKET SECTION ==== */
+.hidden {
+  display: none;
+}
+
+.ticket-section {
+  text-align: center;
+}
+
+.ticket {
+  position: relative;
+  display: inline-block;
+  margin: 2rem 0;
+}
+
+.ticket-bg {
+  width: 100%;
+  max-width: 500px;
+}
+
+.ticket-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+.ticket-logo {
+  width: 50px;
+  margin-bottom: 1rem;
+}
+
+.ticket-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #7847e0;
+}
+
+.ticket-email {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #bfbfe5;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .form-container {
+    width: 90%;
+  }
+  .bg-top,
+  .bg-bottom {
+    display: none;
+  }
+}
