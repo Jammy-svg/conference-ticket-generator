@@ -1,0 +1,317 @@
+/* ==== RESET ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==== BODY ==== */
+body {
+  font-family: "Inconsolata", monospace;
+  background: radial-gradient(ellipse at top left, #1e0044, #000);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.main {
+  position: relative;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ==== BACKGROUND DECOR ==== */
+.bg-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.bg-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+/* Decorative circle and line pattern behind form */
+.main::before,
+.main::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.main::before {
+  top: 15%;
+  left: 10%;
+  width: 400px;
+  height: 400px;
+  background-image: url("images/pattern-circle.svg");
+}
+
+.main::after {
+  bottom: 10%;
+  right: 10%;
+  width: 500px;
+  height: 400px;
+  background-image: url("images/pattern-lines.svg");
+}
+
+/* ==== FORM SECTION ==== */
+.form-container {
+  position: relative;
+  z-index: 2;
+  max-width: 430px;
+  background: rgba(15, 15, 35, 0.8);
+  border: 1px solid #2b2b58;
+  border-radius: 16px;
+  padding: 2.5rem;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 1.8rem;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #bfbfe5;
+  margin-bottom: 2.5rem;
+}
+
+/* ==== FORM ==== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.input-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #0e0e2a;
+  border: 1px solid #2b2b58;
+  color: white;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #7847e0;
+  outline: none;
+}
+
+/* ==== UPLOAD BOX ==== */
+.upload-box {
+  border: 2px dashed #4b4b80;
+  border-radius: 10px;
+  padding: 1.2rem;
+  text-align: center;
+  background-color: #0e0e2a;
+  cursor: pointer;
+  transition: border-color 0.3s ease, transform 0.2s;
+}
+
+.upload-box:hover {
+  border-color: #7847e0;
+  transform: scale(1.02);
+}
+
+.upload-icon {
+  width: 28px;
+  margin-bottom: 0.5rem;
+}
+
+.upload-box p {
+  font-size: 0.9rem;
+  color: #bfbfe5;
+}
+
+.btn {
+  background: #e86400;
+  color: rgb(1, 11, 37);
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background: #e36c2df1;
+}
+
+.photo-upload{
+  font-size: 0.8rem;
+}
+
+/* ==== TICKET SECTION ==== */
+.hidden {
+  display: none;
+}
+
+.ticket-section {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.ticket {
+  position: relative;
+  display: inline-block;
+  margin: 2rem 0;
+}
+
+.ticket-bg {
+  width: 100%;
+  max-width: 520px;
+}
+
+.ticket-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+}
+
+.ticket-logo {
+  width: 55px;
+  margin-bottom: 1rem;
+}
+
+.ticket-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.avatar {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #7847e0;
+}
+
+.ticket-email {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #bfbfe5;
+}
+
+.congrats {
+  font-size: 1.4rem;
+  margin-top: 1.2rem;
+  font-weight: 700;
+}
+
+.ticket-text {
+  color: #bfbfe5;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.ticket-card {
+  background: linear-gradient(135deg, #16023a, #10022b);
+  border-radius: 16px;
+  border: 1px solid #3a2b6f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1rem;
+  gap: 1rem;
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.ticket-icon {
+  width: 25px;
+}
+
+.ticket-left {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.conf-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.conf-info {
+  font-size: 0.75rem;
+  color: #bfbfe5;
+}
+
+.ticket-user {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  position: absolute;
+  bottom: -60px;
+  left: 1rem;
+}
+
+.ticket-right {
+  background-color: #4b2bbd;
+  padding: 0.8rem;
+  border-radius: 0 12px 12px 0;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 1440px) {
+  .form-container {
+    width: 90%;
+  }
+  /* .bg-top,
+  .bg-bottom {
+    display: none;
+  }
+  .main::before,
+  .main::after {
+    display: none;
+  } */
+}

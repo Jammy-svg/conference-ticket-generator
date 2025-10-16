@@ -69,7 +69,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conference Ticket Generator</title>
-    <link rel="icon" href="assets/images/favicon-32x32.png" />
+    <link rel="icon" href="images/favicon-32x32.png" />
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;800&display=swap" rel="stylesheet"/>
   </head>
@@ -77,7 +77,7 @@
   <body>
     <main class="main">
       <section class="form-container" id="formSection">
-        <img src="assets/images/logo-full.svg" alt="Conference logo" class="logo"/>
+        <img src="images/logo-full.svg" alt="Conference logo" class="logo"/>
 
         <h1 class="title">Your Journey to Coding Conf 2025 Starts Here!</h1>
         <p class="subtitle">
@@ -90,11 +90,11 @@
             <label for="avatar">Upload Avatar</label>
             <div class="upload-box" id="uploadBox">
               <input type="file" id="upload-input"  accept="img/jpeg, img/png" class="upload-icon" hidden required />
-              <img src="assets/images/icon-upload.svg" alt="" id="preview-image"/>
+              <img src="images/icon-upload.svg" alt="" id="preview-image"/>
               <p>Drag and drop or click to upload</p>
             </div>
             <div class="photo-upload">
-                <img src="assets/images/icon-info.svg" alt=""  >
+                <img src="images/icon-info.svg" alt=""  >
                 <small>Upload your photo (JPG or PNG, max size: 500KB).</small>
               </div>  
           </div> 
@@ -120,33 +120,33 @@
 
       <!-- Ticket Preview -->
       <section class="ticket-section hidden" id="ticket-section" class="hidden">
-        <img src="assets/images/logo-full.svg" alt="Conference logo" class="logo" id="ticket-avatar"/>
+        <img src="images/logo-full.svg" alt="Conference logo" class="logo" id="ticket-avatar"/>
         <h2 class="congrats">Congrats, <span id="ticket-name"></span>!</h2>
         <p class="ticket-text" id="ticket-email">Your ticket is ready. <br /> We've emailed your ticket to <span id="displayEmail"></span> and will send updates in the run up to the event. </p>
         
         <div class="ticket">
           <div class="ticket-card">
             <div class="ticket-left">
-              <img src="assets/images/pattern-ticket.svg" alt="ticket" class="ticlet-icon">
+              <img src="images/pattern-ticket.svg" alt="ticket" class="ticlet-icon">
               <div>
-                <img src="assets/images/logo-full.svg" alt="" class="conf-title">
+                <img src="images/logo-full.svg" alt="" class="conf-title">
                 <p>Jan 31, 2025 / Austin, TX</p>
               </div>
             </div>
           </div>
 
           <div class="ticket-user">
-            <img src="assets/images/image-avatar.jpg" alt="" id="tickrtAvatar" class="avatar">
+            <img src="images/image-avatar.jpg" alt="" id="tickrtAvatar" class="avatar">
             <div>
               <p class="username" id="ticketname">Jonatan Kristof</p>
             </div>
             <div>
-              <img src="assets/images/icon-github.svg" alt="">
+              <img src="images/icon-github.svg" alt="">
               <p class="handle" id="tickethandles">@jonatankristof0101</p>
             </div>
-          </div> -->
+          </div> 
            
-          <div class="ticket-content">
+          <!-- <div class="ticket-content">
             <img
               src="assets/images/logo-mark.svg"
               alt="Logo"
@@ -165,7 +165,7 @@
               </div>
             </div>
             <p id="ticketEmail" class="ticket-email">jonatan@email.com</p>
-          </div>
+          </div> -->
         </div>
 
         <button id="newTicketBtn" class="btn">Generate Another Ticket</button>
@@ -173,12 +173,12 @@
 
       <!-- Decorative Backgrounds -->
       <img
-        src="assets/images/pattern-squiggly-line-top.svg"
+        src="images/pattern-squiggly-line-top.svg"
         class="bg-top"
         alt=""
       />
       <img
-        src="assets/images/pattern-squiggly-line-bottom-desktop.svg"
+        src="images/pattern-squiggly-line-bottom-desktop.svg"
         class="bg-bottom"
         alt=""
       />
